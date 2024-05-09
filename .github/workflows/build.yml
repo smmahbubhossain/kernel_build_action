@@ -15,15 +15,13 @@ jobs:
     - name: Build Kernel
       uses: dabao1955/kernel_build_action@main
       with:
-          kernel-url: https://github.com/mello-kernel/kernel_realme_sm7125
+          kernel-url: https://github.com/kardebayan/realme_8pro-AndroidT-kernel-source
           kernel-dir: msm-4.19
-          branch: roms
-          config: atoll_defconfig
+          branch: master
+          config: cuttlefish_defconfig
           arch: arm64
-          aosp-gcc: false
-          aosp-clang: false
-          other-clang-url: https://github.com/kdrag0n/proton-clang
-          other-clang-branch: master
+          aosp-gcc: true
+          aosp-clang: true
           apatch: true
           ksu: false
           ksu-version: main
